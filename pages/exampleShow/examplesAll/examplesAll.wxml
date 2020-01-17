@@ -1,0 +1,32 @@
+<view class="list">
+  <view class="listitem">
+    <navigator url="/pages/exampleShow/examples/examples">
+      卡片上滑
+      <image src="http://www.tminlife.cn/wxapp/course.png" mode="widthFix"></image>
+    </navigator>
+  </view>
+  <view class="listitem">
+    <navigator url="/pages/exampleShow/examplesData/examplesData">
+      日历
+      <image src="http://www.tminlife.cn/wxapp/course.png" mode="widthFix"></image>  
+    </navigator>
+  </view>
+  <view class="listitem">
+    <navigator url="/pages/exampleShow/examplesDiDi/examplesDiDi">
+      地图
+      <image src="http://www.tminlife.cn/wxapp/course.png" mode="widthFix"></image>    
+    </navigator>
+  </view>
+  <view class="listitem">
+    <navigator url="">
+      视频播放
+      <image src="http://www.tminlife.cn/wxapp/course.png" mode="widthFix"></image>    
+    </navigator>
+  </view>
+  <view class="listitem">
+    <navigator url="">
+      音乐播放
+      <image src="http://www.tminlife.cn/wxapp/course.png" mode="widthFix"></image>    
+    </navigator>
+  </view>
+</view>

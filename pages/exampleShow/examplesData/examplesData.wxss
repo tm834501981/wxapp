@@ -1,0 +1,41 @@
+/* pages/exampleShow/examplesData/examplesData.wxss */
+.dateContent {
+  margin:20rpx 0rpx;
+}
+.leftpng {
+  width:50rpx;
+}
+.titile  {
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx 80rpx;
+  font-size: 30rpx;
+}
+.week ,
+.datenumber{
+  padding:20rpx 50rpx;
+  font-size:28rpx;
+  color:#333;
+}
+.week view,
+.numberItem{
+  width:14.2%;
+  display: inline-block;
+  text-align: center;
+}
+.numberItem {
+  height: 100rpx;
+}
+.numberItem view{
+  box-sizing: border-box;
+  width:80rpx;
+  line-height: 80rpx;
+}
+.numberItem view.sign { 
+  border-radius: 50%;
+  background: #25B05F;
+  color:white;
+}
+.numberItem view.more {
+  color:#ccc
+}

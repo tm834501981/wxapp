@@ -1,0 +1,22 @@
+<!--pages/exampleShow/examplesData/examplesData.wxml-->
+<view class="dateContent"> 
+  <view class="titile">
+    <image class="leftpng" src="http://www.tminlife.cn/wxapp/dateleft.png" bindtap="beforeMonth" mode="widthFix"></image>
+    <text>{{year}}年{{month}}月</text>
+    <image class="leftpng" src="http://www.tminlife.cn/wxapp/dateright.png" bindtap="nextMonth"  mode="widthFix"></image>
+  </view>
+  <view class="week">
+    <view  wx:for="{{weeks}}" wx:key="">{{item}}</view>
+  </view>
+  <view class="datenumber" >
+    <view class="numberItem" wx:for="{{moreDatestart}}" wx:key="">
+      <view class="more">{{item}}</view>
+    </view>
+    <view class="numberItem" wx:for="{{datenumer}}"  wx:key="">
+      <view class="{{showday == (year+'/'+month+'/'+(index+1))? 'sign':''}}">{{index+1}}</view>
+    </view>
+    <view class="numberItem" wx:for="{{morDateend}}" wx:key="">
+      <view class="more">{{index+1}}</view>
+    </view>
+  </view>
+</view>

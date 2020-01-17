@@ -1,0 +1,14 @@
+<!-- 卡面上滑样例 -->
+<view class="pages">
+  <view class="cardcontent" wx:for="{{cardData}}">
+    <view class="showCard {{item.active}}" bindtouchend="goUp" data-index="{{index}}" style="top:{{-index*30 + 'rpx'}};left:{{index*30+'rpx'}};z-index:{{cardData.length-index}}" wx:if="{{index<cardlength}}" >
+      <image src="http://www.tminlife.cn/wxapp/changeicon.png" class="upcenter" mode="widthFix"></image>
+      <view class="upbtn">向上滑动{{item.name}}</view>
+    </view>
+    <view class="showCard {{item.active}}" bindtouchend="goUp" data-index="{{index}}" style="top:{{-(cardlength-1)*30 + 'rpx'}};left:{{(cardlength-1)*30+'rpx'}};z-index:{{cardData.length-index}}" wx:else >
+      <image src="http://www.tminlife.cn/wxapp/changeicon.png" class="upcenter" mode="widthFix"></image>
+      <view class="upbtn">向上滑动{{item.name}}</view>
+    </view>
+  </view>
+</view>
+

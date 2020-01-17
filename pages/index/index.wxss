@@ -1,0 +1,139 @@
+.content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(10, 10, 50) 0%,rgb(60, 10, 60) 100%);
+  vertical-align: middle;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:0;
+}
+.bigTitle {
+  text-align: center;
+  width: 100%;
+  margin:50rpx 0rpx;
+}
+.swiperShow {
+  background: #fff;
+  border-radius: 20rpx;
+  width:80%;
+  margin:0 auto 50rpx auto;
+  box-shadow: 0 0 10rpx #eee;
+  height:750rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+.topswiper {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.imgShow {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+.showImg {
+  width:100%;
+  /* border-radius: 20rpx; */
+
+}
+.imgInfo {
+  width:100%;
+  overflow: hidden;
+}
+.avaturlbg {
+  width:100rpx;
+  height: 100rpx;
+  padding:3rpx;
+  background: #ccc;
+  margin:0rpx 15rpx 0rpx 20rpx;
+  float: left;
+  border-radius: 50%;
+}
+.avaturl {
+  width:100%;
+  border-radius: 50%;
+}
+.avaturName {
+  font-size:26rpx;
+  vertical-align: middle;
+  color:#444;
+  float: left;
+  margin-top:30rpx;
+}
+.des {
+  font-size:24rpx;
+  margin:0rpx 20rpx 20rpx 20rpx;
+  text-align: left;
+  color:#333;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 45rpx;
+}
+.iconView {
+  float: right;
+}
+.likeIcon {
+  display: inline-block;
+  width:50rpx;
+  margin:30rpx 40rpx 0rpx 0rpx;
+}
+
+.photosShow {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:1;
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+.closephotosShow {
+  position: absolute;
+  top:40rpx;
+  right:50rpx;
+  width:60rpx;
+  z-index:10;
+}
+.numberShow {
+  font-size:40rpx;
+  color:white;
+  position: absolute;
+  top:40rpx;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:10;
+}
+.photosSwiper {
+  width:100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:9;
+}
+.swiperItem {
+  width:100%;
+  height: 100%;
+}
+.swiperItem image {
+  height:100%;
+  margin:0 auto;
+  display: block;
+}
+.desWord {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index:11;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 26rpx;
+  width: 100%;
+  line-height: 40rpx;
+  padding:20rpx;
+}

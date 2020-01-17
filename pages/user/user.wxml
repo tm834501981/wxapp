@@ -1,0 +1,100 @@
+<!--pages/user/user.wxml-->
+<view class="top">
+  <view class="goodSupport">
+    <image src=""></image>
+  </view>
+  <view class="avatur">
+    <image mode="widthFix" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIMIIO7mtYe36shmBszsLzbDvOpZO90icRm9dzH7VsZRtTdoMvVBFgMTFQZZ6EP06h0TCPhuSTzJtQ/132"></image>
+  </view>
+  <view class="info">
+    <view class="name">土肥宅本女</view>
+    <image src="/static/images/female.png" mode="widthFix" class="female"></image>
+    <!-- <image src="/static/images/male.png" mode="widthFix" class="female"></image> -->
+  </view>
+</view>
+<view class="content">
+  <view class="msgitem">
+    <view class="imgShow">
+      <image mode="widthFix" src="https://wechatstoreblob.blob.core.chinacloudapi.cn/lancome/20190911Lancome/%E5%AE%9D%E7%9F%B3%E5%94%87%E8%86%8F%E7%B4%A0%E6%9D%90/PDP/7.jpg"></image>
+    </view>
+    <view class="word">
+      <view class="date">2019-06-10</view>
+      <view class="likeIcon">
+        <text>40</text>
+        <image mode="widthFix" src="/static/images/like.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="msgitem">
+    <view class="imgShow">
+      <image mode="widthFix" src="https://wechatstoreblob.blob.core.chinacloudapi.cn/lancome/20190911Lancome/%E5%AE%9D%E7%9F%B3%E5%94%87%E8%86%8F%E7%B4%A0%E6%9D%90/PDP/7.jpg"></image>
+    </view>
+    <view class="word">
+      <view class="date">2019-06-10</view>
+      <view class="likeIcon">
+        <text>40</text>
+        <image mode="widthFix" src="/static/images/like.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="msgitem">
+    <view class="imgShow">
+      <image mode="widthFix" src="https://wechatstoreblob.blob.core.chinacloudapi.cn/lancome/20190911Lancome/%E5%AE%9D%E7%9F%B3%E5%94%87%E8%86%8F%E7%B4%A0%E6%9D%90/PDP/7.jpg"></image>
+    </view>
+    <view class="word">
+      <view class="date">2019-06-10</view>
+      <view class="likeIcon">
+        <text>40</text>
+        <image mode="widthFix" src="/static/images/like.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="msgitem">
+    <view class="imgShow">
+      <image mode="widthFix" src="https://wechatstoreblob.blob.core.chinacloudapi.cn/lancome/20190911Lancome/%E5%AE%9D%E7%9F%B3%E5%94%87%E8%86%8F%E7%B4%A0%E6%9D%90/PDP/7.jpg"></image>
+    </view>
+    <view class="word">
+      <view class="date">2019-06-10</view>
+      <view class="likeIcon">
+        <text>40</text>
+        <image mode="widthFix" src="/static/images/like.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="msgitem">
+    <view class="imgShow">
+      <image mode="widthFix" src="https://wechatstoreblob.blob.core.chinacloudapi.cn/lancome/20190911Lancome/%E5%AE%9D%E7%9F%B3%E5%94%87%E8%86%8F%E7%B4%A0%E6%9D%90/PDP/7.jpg"></image>
+    </view>
+    <view class="word">
+      <view class="date">2019-06-10</view>
+      <view class="likeIcon">
+        <text>40</text>
+        <image mode="widthFix" src="/static/images/like.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="msgitem">
+    <view class="imgShow">
+      <image mode="widthFix" src="https://wechatstoreblob.blob.core.chinacloudapi.cn/lancome/20190911Lancome/%E5%AE%9D%E7%9F%B3%E5%94%87%E8%86%8F%E7%B4%A0%E6%9D%90/PDP/7.jpg"></image>
+    </view>
+    <view class="word">
+      <view class="date">2019-06-10</view>
+      <view class="likeIcon">
+        <text>40</text>
+        <image mode="widthFix" src="/static/images/like.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="msgitem">
+    <view class="imgShow">
+      <image mode="widthFix" src="https://wechatstoreblob.blob.core.chinacloudapi.cn/lancome/20190911Lancome/%E5%AE%9D%E7%9F%B3%E5%94%87%E8%86%8F%E7%B4%A0%E6%9D%90/PDP/7.jpg"></image>
+    </view>
+    <view class="word">
+      <view class="date">2019-06-10</view>
+      <view class="likeIcon">
+        <text>40</text>
+        <image mode="widthFix" src="/static/images/like.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

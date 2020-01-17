@@ -1,0 +1,19 @@
+/* pages/examplesAll/examplesAll.wxss */
+.list {
+
+}
+.listitem {
+  width:90%;
+  line-height: 80rpx;
+  margin:30rpx auto;
+  font-size:24rpx;
+  color:#333;
+  padding-left:30rpx;
+  border:1rpx dotted #333;
+}
+.listitem image { 
+  width:50rpx;
+  float: right;
+  margin-top:13rpx;
+  margin-right: 10rpx;
+}

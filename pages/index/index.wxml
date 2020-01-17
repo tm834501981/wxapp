@@ -1,0 +1,39 @@
+<scroll-view scroll-y class="content">
+  <view class="bigTitle">
+    <image src="/static/images/title.png" mode="widthFix"></image>
+    <view wx:for="{{indexInfo.photos}}" class="swiperShow" wx:key="">
+      <swiper class="topswiper" indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}">
+        <swiper-item wx:for="{{item.content}}" wx:key="" wx:for-index="imgIndex"  wx:for-item="imgItem" bindtap="showBigImg" data-index="{{index}}" data-imgIndex="{{imgIndex}}">
+          <view class="imgShow">
+            <image src="{{imgItem.src}}" class="showImg" mode="widthFix"></image>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class="imgInfo">
+        <view class="des">{{item.des}}</view>
+        <view class="avaturlbg">
+          <image src="{{item.avatarUrl}}" class="avaturl" mode="widthFix"></image>
+        </view>
+        <view class="avaturName">{{item.name}}</view>
+        <view class="iconView">
+          <image src="{{item.like?'/static/images/likeon.png':'/static/images/like.png'}}" class="likeIcon" bindtap="likeChange" data-index="{{index}}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+    <view style="height:20rpx;"></view>
+  </view>
+  <view class="flower">
+    <view>123</view>
+  </view>
+</scroll-view>
+
+<view class="photosShow" wx:if="{{showphotosShow}}">
+  <image src="/static/images/close.png" mode="widthFix" bindtap="closephotosShow" class="closephotosShow"></image>
+  <view class="numberShow">{{imgindex + 1}}/{{showPhotos.length}}</view>
+  <swiper class="photosSwiper" circular="{{true}}"  bindchange="changeCurrent" current="{{imgindex}}">
+    <swiper-item wx:for="{{showPhotos}}" class="swiperItem" wx:key="">
+      <image src="{{item.src}}" mode="heightFix"></image>
+    </swiper-item>
+  </swiper>
+  <view class="desWord">{{desWord}}</view>
+</view>
