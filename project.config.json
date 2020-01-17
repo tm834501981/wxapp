@@ -85,21 +85,21 @@
 				{
 					"id": 4,
 					"name": "地图",
-					"pathName": "pages/exampleShow/examplesDiDi/examplesDiDi",
+					"pathName": "pages/exampleShow/map/examplesDiDi/examplesDiDi",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "地图-路线",
-					"pathName": "pages/exampleShow/examplesmapline/examplesmapline",
+					"pathName": "pages/exampleShow/map/examplesmapline/examplesmapline",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "地图--搜索地点",
-					"pathName": "pages/exampleShow/examplessearch/examplessearch",
+					"pathName": "pages/exampleShow/map/examplessearch/examplessearch",
 					"scene": null
 				}
 			]

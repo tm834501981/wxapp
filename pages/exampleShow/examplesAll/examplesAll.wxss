@@ -17,3 +17,6 @@
   margin-top:13rpx;
   margin-right: 10rpx;
 }
+.listitem .icon {
+  float: left;
+}

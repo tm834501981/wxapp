@@ -5,9 +5,10 @@
     "pages/exampleShow/examples/examples",
     "pages/exampleShow/examplesAll/examplesAll",
     "pages/exampleShow/examplesData/examplesData",
-    "pages/exampleShow/examplesDiDi/examplesDiDi",
-    "pages/exampleShow/examplesmapline/examplesmapline",
-    "pages/exampleShow/examplessearch/examplessearch"
+    "pages/exampleShow/map/examplesDiDi/examplesDiDi",
+    "pages/exampleShow/map/examplesmapline/examplesmapline",
+    "pages/exampleShow/map/examplessearch/examplessearch",
+    "pages/exampleShow/video/videoindex/videoindex"
   ],
   "permission": {
     "scope.userLocation": {

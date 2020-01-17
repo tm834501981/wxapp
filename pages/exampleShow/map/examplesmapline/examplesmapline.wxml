@@ -1,0 +1,172 @@
+<!--pages/exampleShow/examplesmapline/examplesmapline.wxml-->
+<view class="page" style="{{showline?'background: #EFEFEF;':'background:white'}}">
+  <view class="top" wx:if="{{showline}}">
+    <view class="inputline">
+      <view class="word">
+        <image src="http://www.tminlife.cn/wxapp/start.png" mode="widthFix"></image>
+        <view bindtap="showstartinput" style="{{inputstart == '输入起点'?'color:#929292;':''}}">{{inputstart}}</view>
+      </view>
+      <view class="word">
+        <image src="http://www.tminlife.cn/wxapp/end.png" mode="widthFix"></image>
+        <view bindtap="showendinput" style="{{inputend == '输入终点'?'color:#929292;':''}}">{{inputend}}</view>
+      </view>
+    </view>
+    <view class="typeline" wx:if="{{showlinetype}}">
+      <view  bindtap="{{showclick == 'driving'?'':'showdriving'}}">
+        <image src="http://www.tminlife.cn/wxapp/taxton.png" mode="widthFix"  wx:if="{{showclick == 'driving'}}"></image>
+        <image src="http://www.tminlife.cn/wxapp/taxt.png" wx:else mode="widthFix"></image>
+      </view>
+      <view  bindtap="{{showclick == 'bus'?'':'showbus'}}">
+        <image src="http://www.tminlife.cn/wxapp/buson.png" wx:if="{{showclick == 'bus'}}" mode="widthFix"></image>
+        <image src="http://www.tminlife.cn/wxapp/bus.png" wx:else mode="widthFix" ></image>
+      </view>
+      <view bindtap="{{showclick == 'walk'?'':'showwalk'}}" >
+        <image src="http://www.tminlife.cn/wxapp/walkon.png" wx:if="{{showclick == 'walk'}}" mode="widthFix"></image>
+        <image src="http://www.tminlife.cn/wxapp/walk.png" wx:else mode="widthFix" ></image>
+      </view>
+    </view>
+    <image src="http://www.tminlife.cn/wxapp/change.png" mode="widthFix" bindtap="change" class="changeimage"></image>
+  </view>
+  <view class="inputShow" wx:else>
+    <view class="inputword">
+      <input placeholder="{{inputtext}}" bindinput="getaddress" value="{{address}}"></input>
+      <view class="inputclear" bindtap="clearchoose">取消</view>
+      <image wx:if="{{showclose}}"src="http://www.tminlife.cn/wxapp/historyclose.png" bindtap="clearaddress" mode="widthFix"></image>
+    </view>
+    <view class="inputIcon">
+      <view bindtap="myaddress">
+        <image src="http://www.tminlife.cn/wxapp/myaddress.png"  mode="widthFix"></image>
+        <text>我的位置</text>
+      </view>
+      <view bindtap="chooseaddress">
+        <image src="http://www.tminlife.cn/wxapp/mymap.png"  mode="widthFix"></image>
+        <text>地图选点</text> 
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{showhistory && !showlinetype}}" style="{{showline?'':'padding-top:20rpx;background:#EFEFEF'}}">
+    <scroll-view  wx:if="{{historydata && historydata.length}}" scroll-y style="max-height:calc(100vh - 220rpx);" class="history">
+      <view class="item" wx:for="{{historydata}}" wx:key="index" bindtap="choosehistory" data-data="{{item}}">
+        <image src="http://www.tminlife.cn/wxapp/history.png" mode="widthFix" class="historyimage"></image>
+        <view class="historyword"  style="width:570rpx;">
+          <text>{{item.title}}</text>
+          <text>{{item.address}}</text>
+        </view>
+      </view>
+      <!-- <view class="item">
+        <image src="http://www.tminlife.cn/wxapp/history.png" mode="widthFix" class="historyimage"></image>
+        <view class="historyword">
+          <text>大宁国际商业广场</text>
+          <text>购物 上海静安区共和新路1988号</text>
+        </view>
+      </view> -->
+      <view class="clearhistory" bindtap="clearhistory">清除历史记录</view>
+    </scroll-view>
+    <view wx:else >
+      <view class="clearhistory" wx:if="{{showline}}">暂无历史记录</view>
+      <view class="clearhistory" wx:else style="background:white;">暂无历史记录</view>
+    </view>
+  </view>
+  
+  <view class="showsearchWord" wx:if="{{!showhistory && !showlinetype}}">
+    <scroll-view scroll-y wx:if="{{suggestion && suggestion.length}}" style="height:calc(100vh - 220rpx);" class="history">
+      <view class="item" wx:for="{{suggestion}}" wx:key="index" bindtap="chooseserach" data-data="{{item}}">
+        <image src="http://www.tminlife.cn/wxapp/historyaddress.png" style="width:60rpx;" mode="widthFix" class="historyimage"></image>
+        <view class="historyword" >
+          <text>{{item.title}}</text>
+          <text>{{item.addr}}</text>
+        </view>
+        <view class="mi">{{item.mi}}</view>
+      </view>
+    </scroll-view>
+    <view wx:else class="clearhistory">暂无搜索结果</view>
+  </view>
+   <map
+    wx:if="{{showlinetype}}"
+    id="myMap"
+    style="width: 100%; display:block;height:calc(100vh - 510rpx);"
+    longitude="{{longitude}}" latitude="{{latitude}}"
+    scale='{{scale}}'
+    markers="{{markers}}"
+    polyline="{{polyline}}"
+    show-location
+    >
+    </map>
+    <cover-view   wx:if="{{showlinetype}}" class="myaddress" bindtap="myadress">
+      <cover-image src="http://www.tminlife.cn/wxapp/suodingweizhi.png" mode="widthFix"></cover-image>
+    </cover-view>
+    <swiper class="coverview" current="{{dotindex}}" bindchange="coverviewmove"  indicator-dots="{{true}}" indicator-color="#ccc" indicator-active-color="#415FEC" wx:if="{{showlinetype}}">
+      <swiper-item wx:for="{{coverdata}}" wx:key="index" data-index="{{index}}" class="swipershow">
+        <view class="topview" wx:if="{{showclick == 'driving' || showclick == 'walk'}}">
+          <view class="bigcover">
+            {{item.duration}} 
+          </view>
+          <view class="bigcover"> 
+            {{item.distance}}
+          </view>
+        </view>
+        <view class="topline" wx:if="{{showclick == 'bus'}}">
+          <view  class="flexline" wx:for="{{item.linesdata}}" wx:for-item="lineitem" wx:for-index="lineindex" wx:key="lineindex">
+            <view class="flexline"  wx:for="{{lineitem}}" wx:for-item="subitem" wx:for-index="subindex" wx:key="subindex">
+              <view class="flexline iconline">
+                {{subitem.title}}
+              </view> 
+              <view class="flexline xieline" wx:if="{{subindex != (lineitem.length -1)}}" >/</view>
+            </view>
+           <view class="flexline jianline" wx:if="{{lineindex != (item.linesdata.length -1)}}">></view>
+          </view>
+        </view>
+        <block wx:if="{{showclick == 'driving' || showclick == 'walk'}}">
+          <view class="samllview" wx:if="{{item.taxi_fare.fare}}">打车约{{item.taxi_fare.fare}}元</view>
+          <view class="samllview" wx:if="{{item.direction}}">在您的{{item.direction}}方向</view>
+        </block>
+        <view wx:if="{{showclick == 'bus'}}">
+          <view class="samllview">{{item.duration}} 步行{{item.walkstep}}</view>
+        </view>
+      </swiper-item>
+      <!-- <cover-view class="dots">
+        <cover-view wx:for="{{coverdata}}" wx:key="index" class="showdot {{dotindex == index?'active':''}}"></cover-view>
+      </cover-view> -->
+    </swiper>
+
+
+    <!-- <cover-view class="coverview" wx:if="{{showlinetype}}">
+      <cover-view wx:for="{{coverdata}}" wx:key="index" style="{{'transform: translateX('+translatex+')'}}" data-index="{{index}}" bindtouchend="coverviewmove" bindtouchstart='touchStart' class="swipershow">
+        <cover-view class="topview" wx:if="{{showclick == 'driving' || showclick == 'walk'}}">
+          <cover-view class="bigcover">
+            {{item.duration}}
+     	      <cover-view class="nofont"></cover-view>  
+          </cover-view>
+          <cover-view class="bigcover"> 
+            {{item.distance}}
+     	      <cover-view class="nofont"></cover-view>  
+          </cover-view>
+        </cover-view>
+        <cover-view class="topline" wx:if="{{showclick == 'bus'}}">
+          <cover-view  class="flexline" wx:for="{{item.linesdata}}" wx:for-item="lineitem" wx:for-index="lineindex" wx:key="lineindex">
+            <cover-view class="flexline"  wx:for="{{lineitem}}" wx:for-item="subitem" wx:for-index="subindex" wx:key="subindex">
+              <cover-view class="flexline iconline">
+                {{subitem.title}}
+     	          <cover-view class="nofont"></cover-view>  
+              </cover-view> 
+              <cover-view class="flexline xieline" wx:if="{{subindex != (lineitem.length -1)}}" >/</cover-view>
+            </cover-view>
+           <cover-view class="flexline jianline" wx:if="{{lineindex != (item.linesdata.length -1)}}">></cover-view>
+          </cover-view>
+        </cover-view>
+        <block wx:if="{{showclick == 'driving' || showclick == 'walk'}}">
+          <cover-view class="samllview" wx:if="{{item.taxi_fare.fare}}">打车约{{item.taxi_fare.fare}}元</cover-view>
+          <cover-view class="samllview" wx:if="{{item.direction}}">在您的{{item.direction}}方向</cover-view>
+        </block>
+        <cover-view wx:if="{{showclick == 'bus'}}">
+          <cover-view class="samllview">{{item.duration}} 步行{{item.walkstep}}</cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class="dots">
+        <cover-view wx:for="{{coverdata}}" wx:key="index" class="showdot {{dotindex == index?'active':''}}"></cover-view>
+      </cover-view>
+    </cover-view> -->
+</view>
+
+
