@@ -929,6 +929,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      path: '/pages/exampleShow/map/examplesDiDi/examplesDiDi',
+      title: '你若安好，便是晴天~',
+      imageUrl: 'http://www.tminlife.cn/wxapp/share/map.png'
+    }
   }
 })

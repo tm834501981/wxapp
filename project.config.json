@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.0",
+	"libVersion": "2.10.2",
 	"appid": "wx9ecf73709fc19f47",
 	"projectname": "%E5%9C%9F%E8%82%A5%E5%AE%85%E6%9C%AC%E5%A5%B3",
 	"debugOptions": {
@@ -100,6 +100,14 @@
 					"id": -1,
 					"name": "地图--搜索地点",
 					"pathName": "pages/exampleShow/map/examplessearch/examplessearch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "天气预报",
+					"pathName": "pages/exampleShow/weather/weather",
+					"query": "",
 					"scene": null
 				}
 			]

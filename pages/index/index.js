@@ -58,11 +58,10 @@ Page({
       desWord
     })
   },
-  onShareAppMessage() {
+  onShareAppMessage: function () {
     return {
-      path:'/pages/index/index',
-      title: '桃花坞里桃花庵，桃花庵下桃花仙；桃花仙人种桃树，又摘桃花卖酒钱。'
-      
+      title: '你若安好，便是晴天~',
+      imageUrl: 'http://www.tminlife.cn/wxapp/share/weatherShare.jpg'
     }
   }
 })

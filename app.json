@@ -8,7 +8,7 @@
     "pages/exampleShow/map/examplesDiDi/examplesDiDi",
     "pages/exampleShow/map/examplesmapline/examplesmapline",
     "pages/exampleShow/map/examplessearch/examplessearch",
-    "pages/exampleShow/video/videoindex/videoindex"
+    "pages/exampleShow/weather/weather"
   ],
   "permission": {
     "scope.userLocation": {

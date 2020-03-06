@@ -1,0 +1,139 @@
+
+    
+    
+<view class="{{showbgBlur?'showbgBlur':''}}">
+  <view class="mainbg">
+  <image class="bgimage" src="http://www.tminlife.cn/wxapp/weatherbg.png" mode="widthFix"></image>
+  <!-- 今天天气 -->
+  <view class="content">
+      <view class="address">
+        <image src="http://www.tminlife.cn/wxapp/weatheraddress.png" mode="widthFix"></image>
+        {{adinfo.city}} {{adinfo.district}}
+      </view>
+      <view class="health" style="background:{{aircity.color}}" bindtap="showAir">
+        <view>{{aircity.aqi}}</view>
+        <view>{{aircity.qlty}}</view>
+      </view>
+      <view class="number">{{now.tmp}}</view>
+      <view class="weatherchinese">{{now.cond_txt}}</view>
+      <swiper class="weatherSwiper" autoplay="{{true}}" interval="{{2000}}" vertical="{{true}}" circular="{{true}}">
+        <swiper-item>{{now.wind_dir}} {{now.wind_sc}}级</swiper-item>
+        <swiper-item>风速 {{now.wind_spd}}km/h</swiper-item>
+        <swiper-item>湿度 {{now.hum}}%</swiper-item>
+      </swiper>
+      <view class="tips">{{tips}}</view>
+  </view>
+  </view>
+  <!-- 今明两天天气 -->
+  <view class="twodays">
+    <view class="today">
+      <view class="days">
+        <view>今天</view>
+        <view>{{sevenday[0].tmp_max}}/{{sevenday[0].tmp_min}}℃</view>  
+      </view>
+      <view class="daysweather">
+        <view class="word">{{sevenday[0].cond_txt_d}}</view>
+        <image src="{{'http://www.tminlife.cn/wxapp/weathericon/'+sevenday[0].cond_code_d+'.png'}}" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="today">
+      <view class="days">
+        <view>明天</view>
+        <view>{{sevenday[1].tmp_max}}/{{sevenday[1].tmp_min}}℃</view>  
+      </view>
+      <view class="daysweather">
+        <view class="word">{{sevenday[1].cond_txt_d}}</view>
+        <image src="{{'http://www.tminlife.cn/wxapp/weathericon/'+sevenday[1].cond_code_d+'.png'}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 每小时天气 -->
+  <view class="houersInfo">
+    <scroll-view scroll-x="{{true}}" style=" white-space: nowrap; display: flex" > 
+      <view wx:for="{{houersInfo}}" class="hoursItem" wx:key="index">
+        <view>{{item.hour}}</view>
+        <image src="{{'http://www.tminlife.cn/wxapp/weathericon/'+item.cond_code+'.png'}}" mode="widthFix"></image>
+        <view>{{item.tmp}}°</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 7天天气 -->
+  <view class="weatherinfo">
+    <view class="sun">
+      <view class="sunitem" wx:for="{{sevenday}}" wx:key="index" wx:if="{{index < 6}}">
+        <view>{{item.days}}</view>
+        <view>{{item.dates}}</view>
+        <view class="sunweather">{{item.cond_txt_d}}</view>
+        <image src="{{'http://www.tminlife.cn/wxapp/weathericon/'+item.cond_code_d+'.png'}}" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="echart_panel" class="canvesImg">
+      <ec-canvas ec="{{ ecLine }}"></ec-canvas>
+    </view>
+    <view class="sun" style="position:relative;top:-40rpx;">
+      <view class="sunitem" wx:for="{{sevenday}}" wx:key="index" wx:if="{{index < 6}}">
+        <image style="margin-top:0rpx" src="{{'http://www.tminlife.cn/wxapp/weathericon/'+item.cond_code_n+'.png'}}" mode="widthFix"></image>
+        <view class="sunweather">{{item.cond_txt_n}}</view>
+        <view>{{item.wind_dir}}</view>
+        <view>{{item.wind_sc}}级</view>
+      </view>
+    </view>
+  </view>
+  <!-- 生活质量 -->
+  <view class="lifestyle">
+    <view class="lifetypeItem" bindtap="showinfo" data-item="{{item}}" wx:for="{{lifestyle}}" wx:key="index">
+      <image src="{{item.icon}}" mode="widthFix" class="icontype"></image>
+      <view class="life">{{item.brf}}</view>
+      <view class="lifetitle">{{item.typename}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 生活质量弹窗 -->
+<view class="showbg" wx:if="{{showlifeBg}}">
+  <view class="showLifeInfo">
+    <view class="showLifeTitle">{{showLife.typename}}</view>
+    <view class="showLifedes">{{showLife.txt}}</view>
+    <view class="showLifeBtn" bindtap="closetap">我知道了</view>
+  </view>
+</view>
+
+<!-- 空气质量弹窗 -->
+<view class="showbg" wx:if="{{showairBg}}">
+  <view class="showLifeInfo">
+    <view class="topbg">
+      <view class="airtitle">空气质量指数</view>
+      <view class="airaqi">{{aircity.aqi}}</view>
+      <view class="airword" style="background:{{aircity.color}}" >{{aircity.qlty}}</view>
+    </view>
+    <view class="otherAir">
+      <view class="otherItem">
+        <view>{{aircity.pm25}}</view>
+        <view>PM2.5</view>
+      </view>
+      <view class="otherItem">
+        <view>{{aircity.pm10}}</view>
+        <view>PM10</view>
+      </view>
+      <view class="otherItem">
+        <view>{{aircity.so2}}</view>
+        <view>SO2</view>
+      </view>
+    </view>
+    <view class="otherAir">
+      <view class="otherItem">
+        <view>{{aircity.no2}}</view>
+        <view>NO2</view>
+      </view>
+      <view class="otherItem">
+        <view>{{aircity.o3}}</view>
+        <view>O3</view>
+      </view>
+      <view class="otherItem">
+        <view>{{aircity.co}}</view>
+        <view>CO</view>
+      </view>
+    </view>
+    <image src="http://www.tminlife.cn/wxapp/airclose.png" mode="widthFix" class="closeair" bindtap="closetap"></image>
+  </view>
+</view>
