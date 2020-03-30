@@ -1,0 +1,4 @@
+<import src="../template/noteBottom.wxml"/>
+
+
+<template is="noteShow" data="{{showClass}}"></template>

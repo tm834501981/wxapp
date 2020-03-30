@@ -1,0 +1,29 @@
+.bottom {
+  position: fixed;
+  bottom:0;
+  left:0;
+  border-top: 1rpx solid #EBEBEB;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding:0rpx 30rpx;
+  box-sizing: border-box;
+  width:100%;
+}
+.bottomIcon {
+  font-size:40rpx;
+  color:#8E8D8E;
+  display: block;
+  line-height: 30rpx;
+}
+.bottomText {
+  font-size:22rpx;
+  color:#333;
+}
+.bottomItem {
+  padding:15rpx 50rpx 0rpx 50rpx;
+}
+.active .bottomIcon,
+.active .bottomText{
+ color:#FCA72E;
+}

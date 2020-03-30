@@ -8,7 +8,11 @@
     "pages/exampleShow/map/examplesDiDi/examplesDiDi",
     "pages/exampleShow/map/examplesmapline/examplesmapline",
     "pages/exampleShow/map/examplessearch/examplessearch",
-    "pages/exampleShow/weather/weather"
+    "pages/exampleShow/weather/weather",
+    "pages/exampleShow/note/noteDetail/noteDetail",
+    "pages/exampleShow/note/noteCanvas/noteCanvas",
+    "pages/exampleShow/note/noteYear/noteYear",
+    "pages/exampleShow/note/noteNow/noteNow"
   ],
   "permission": {
     "scope.userLocation": {

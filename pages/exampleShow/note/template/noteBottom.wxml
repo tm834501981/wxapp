@@ -1,0 +1,20 @@
+<template name="noteShow">
+  <view class="bottom">
+    <navigator open-type="redirect" url="{{showClass=='mingxi'?'':'/pages/exampleShow/note/noteDetail/noteDetail'}}" class="{{showClass=='mingxi'?'bottomItem active':'bottomItem'}}">
+      <text class="iconfont icon-wanglaimingxizhang bottomIcon"></text>
+      <text class="bottomText">明细</text>
+    </navigator>
+    <navigator open-type="redirect" url="{{showClass=='tubiao'?'':'/pages/exampleShow/note/noteCanvas/noteCanvas'}}" class="{{showClass=='tubiao'?'bottomItem active':'bottomItem'}}">
+      <text class="iconfont icon-tubiao bottomIcon"></text>
+      <text class="bottomText">图表</text>
+    </navigator>
+    <navigator open-type="redirect" url="{{showClass=='zhangdan'?'':'/pages/exampleShow/note/noteYear/noteYear'}}" class="{{showClass=='zhangdan'?'bottomItem active':'bottomItem'}}">
+      <text class="iconfont icon-icon-- bottomIcon"></text>
+      <text class="bottomText">账单</text>
+    </navigator>
+    <navigator open-type="redirect" url="{{showClass=='jizhang'?'':'/pages/exampleShow/note/noteNow/noteNow'}}" class="{{showClass=='jizhang'?'bottomItem active':'bottomItem'}}">
+      <text class="iconfont icon-jia  bottomIcon"></text>
+      <text class="bottomText">记账</text>
+    </navigator>
+  </view>
+</template>

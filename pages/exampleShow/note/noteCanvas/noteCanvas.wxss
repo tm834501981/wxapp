@@ -1,0 +1,3 @@
+/* pages/exampleShow/note/noteCanvas/noteCanvas.wxss */
+@import "../noteIconfont/iconfont.wxss";
+@import "../template/noteBottom.wxss";

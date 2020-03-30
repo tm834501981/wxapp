@@ -109,6 +109,19 @@
 					"pathName": "pages/exampleShow/weather/weather",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "记账--明细",
+					"pathName": "pages/exampleShow/note/noteDetail/noteDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "记账--记账",
+					"pathName": "pages/exampleShow/note/noteNow/noteNow",
+					"scene": null
 				}
 			]
 		}

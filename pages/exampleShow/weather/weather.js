@@ -15,6 +15,9 @@ function getOption(xData, data_cur, data_his) {
         }
       }
     },
+    grid: {
+      x: 28,
+    },
     xAxis: [
       {
         type: 'category',

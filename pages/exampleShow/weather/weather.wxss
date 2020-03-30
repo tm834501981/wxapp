@@ -280,8 +280,8 @@ page {
   font-size:32rpx;
 }
 .canvesImg {
-  width:108%;
+  width:103%;
   height:350rpx;
-  position: relative;
-  transform: translateX(-4%);
+  /* position: relative; */
+  /* transform: translateX(-4%); */
 }

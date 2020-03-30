@@ -1,0 +1,73 @@
+<import src="../template/noteBottom.wxml"/>
+
+<template is="noteShow" data="{{showClass}}"></template>
+
+<view class="top">
+  <view class="topTitle">
+    <view class="first">{{yearDate}}年</view>
+    <view class="secd">收入</view>
+    <view class="last">支出</view>
+  </view>
+  <view class="topContent">
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" class="first" range="{{multiArray}}">
+      <view class="picker">
+        <text class=".bigFont">{{monthdate}}</text>月
+        <text class="iconfont icon-xiala"></text>
+        <text class="rightLine"></text>
+      </view>
+    </picker>
+
+    <view class="secd">
+      <text class="bigFont">0</text>.00
+    </view>
+    <view class="last">
+      <text class="bigFont">1870</text>.50
+    </view>
+  </view>
+</view>
+<view class="details">
+  <view class="detailItem">
+    <view class="detailDate">
+      <view class="dateTime">03月08日 星期日</view>
+      <view class="ddatePrice">支出：85</view>
+    </view>
+    <view class="detailInfo">
+      <view class="infoItem">
+        <text class="iconfont infoIcon icon-yule"></text>
+        <view class="word">
+          <text class="infoTitle">吃鸡</text>
+          <text class="infoPrice">-85</text>
+        </view>
+      </view>
+      <view class="infoItem">
+        <text class="iconfont infoIcon icon-yule"></text>
+        <view class="word">
+          <text class="infoTitle">吃鸡</text>
+          <text class="infoPrice">-85</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="detailItem">
+    <view class="detailDate">
+      <view class="dateTime">03月08日 星期日</view>
+      <view class="ddatePrice">支出：85</view>
+    </view>
+    <view class="detailInfo">
+      <view class="infoItem">
+        <text class="iconfont infoIcon icon-yule"></text>
+        <view class="word">
+          <text class="infoTitle">吃鸡</text>
+          <text class="infoPrice">-85</text>
+        </view>
+      </view>
+      <view class="infoItem">
+        <text class="iconfont infoIcon icon-yule"></text>
+        <view class="word">
+          <text class="infoTitle">吃鸡</text>
+          <text class="infoPrice">-85</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
