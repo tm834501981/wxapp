@@ -1,4 +1,6 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "记账笔记"
+  "navigationBarTitleText": "记账笔记",
+  "navigationBarBackgroundColor": "#FDDC2D",
+  "navigationBarTextStyle": "black"
 }

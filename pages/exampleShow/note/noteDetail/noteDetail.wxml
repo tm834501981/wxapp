@@ -9,7 +9,7 @@
     <view class="last">支出</view>
   </view>
   <view class="topContent">
-    <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" class="first" range="{{multiArray}}">
+    <picker mode="date" fields="month" bindchange="bindMultiPickerChange" value="{{multiIndex}}" class="first">
       <view class="picker">
         <text class=".bigFont">{{monthdate}}</text>月
         <text class="iconfont icon-xiala"></text>
@@ -32,14 +32,14 @@
       <view class="ddatePrice">支出：85</view>
     </view>
     <view class="detailInfo">
-      <view class="infoItem">
+      <view class="infoItem" bindtap="goDetailShow">
         <text class="iconfont infoIcon icon-yule"></text>
         <view class="word">
           <text class="infoTitle">吃鸡</text>
           <text class="infoPrice">-85</text>
         </view>
       </view>
-      <view class="infoItem">
+      <view class="infoItem" bindtap="goDetailShow">
         <text class="iconfont infoIcon icon-yule"></text>
         <view class="word">
           <text class="infoTitle">吃鸡</text>
@@ -54,14 +54,14 @@
       <view class="ddatePrice">支出：85</view>
     </view>
     <view class="detailInfo">
-      <view class="infoItem">
+      <view class="infoItem" bindtap="goDetailShow">
         <text class="iconfont infoIcon icon-yule"></text>
         <view class="word">
           <text class="infoTitle">吃鸡</text>
           <text class="infoPrice">-85</text>
         </view>
       </view>
-      <view class="infoItem">
+      <view class="infoItem"  bindtap="goDetailShow">
         <text class="iconfont infoIcon icon-yule"></text>
         <view class="word">
           <text class="infoTitle">吃鸡</text>

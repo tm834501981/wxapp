@@ -1,4 +1,45 @@
 <import src="../template/noteBottom.wxml"/>
-
-
 <template is="noteShow" data="{{showClass}}"></template>
+<view class="topChoose">
+  <view class="changeType" >
+    <view wx:for="{{noteType}}" wx:key="index"  bindtap="changeNoteType" data-index="{{index}}" class="{{noteTypeIndex == index?'active':''}}">{{item}}</view>
+  </view>
+  <view class="changeType changeDate">
+    <view  wx:for="{{noteDate}}"  wx:key="index" bindtap="changeNoteDate" data-index="{{index}}" class="{{noteDateIndex == index?'active':''}}">{{item}}</view>
+  </view>
+</view>
+<scroll-view scroll-x="{{true}}"  scroll-left="{{scrollLeft}}" scroll-with-animation="{{true}}"  class="scrollDate">
+  <view wx:for="{{scrollData}}" wx:key="index" bindtap="showScrollItem"  data-index="{{index}}" class="itemDate {{nowIndex == index?'active':''}}">{{item+1+noteDate[noteDateIndex]}}</view>
+</scroll-view>
+<view class="canvasDate">
+  <view>总支出：1754.00</view>
+  <view class="smallFont">平均值：292.33</view>
+  <view class="echart_panel canvasShow">
+    <ec-canvas ec="{{ ecLine }}"></ec-canvas>
+  </view>
+</view>
+<view class="ranking">
+  <view class="titleshow">{{noteType[noteTypeIndex]}}排行榜</view>
+  <view class="rankItem">
+    <text class="iconfont infoIcon icon-yule"></text>   
+    <view class="lineShow">
+      <view class="topLine">
+        <view class="lineName">住房</view>
+        <view class="percent">74.6%</view>
+        <view class="linePrice">1309</view>
+      </view>
+      <view class="lineBorder" style="width:100%"></view>
+    </view>
+  </view>
+  <view class="rankItem">
+    <text class="iconfont infoIcon icon-yule"></text>   
+    <view class="lineShow">
+      <view class="topLine">
+        <view class="lineName">购物</view>
+        <view class="percent">23%</view>
+        <view class="linePrice">200</view>
+      </view>
+      <view class="lineBorder" style="width:20%"></view>
+    </view>
+  </view>
+</view>

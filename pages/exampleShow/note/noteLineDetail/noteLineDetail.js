@@ -1,29 +1,18 @@
-// pages/exampleShow/note/noteYear/noteYear.js
+// pages/exampleShow/note/noteLineDetail/noteLineDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showClass:'zhangdan',
-    checkYear:'',//当前选择年份
+
   },
-  // 选择当前笔记年份
-  chooseYear(e){
-    this.setData({
-      checkYear: e.detail.value
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let date = new Date()
-    let that = this
-    let checkYear = date.getFullYear()
-    this.setData({
-      checkYear
-    })
+
   },
 
   /**
@@ -72,9 +61,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    return {
-      title: '你若安好，便是晴天~',
-      imageUrl: 'http://www.tminlife.cn/wxapp/share/noteshare.png'
-    }
+
   }
 })

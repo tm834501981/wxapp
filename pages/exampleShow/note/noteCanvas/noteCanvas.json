@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "记账笔记"
+  "usingComponents": {
+    "ec-canvas": "../../../../utils/ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "记账笔记",
+  "navigationBarBackgroundColor": "#FDDC2D",
+  "navigationBarTextStyle": "black"
 }

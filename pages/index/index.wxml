@@ -22,9 +22,6 @@
     </view>
     <view style="height:20rpx;"></view>
   </view>
-  <view class="flower">
-    <view>123</view>
-  </view>
 </scroll-view>
 
 <view class="photosShow" wx:if="{{showphotosShow}}">

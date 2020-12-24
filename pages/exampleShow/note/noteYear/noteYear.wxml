@@ -1,4 +1,111 @@
 <import src="../template/noteBottom.wxml"/>
-
-
 <template is="noteShow" data="{{showClass}}"></template>
+<view class="YearShow">
+  <view class="Balance">结余</view>
+  <view class="BalanceMoney">-14666.<text>98</text></view>
+  <view class="BalanceDetail">
+    <view class="BalanceItem">
+      收入
+      <text>0.00</text>
+    </view>
+    <view class="lineShow"></view>
+    <view class="BalanceItem">
+      支出
+      <text>14666.98</text>
+    </view>
+  </view>
+  <picker class="pickerYear" bindchange="chooseYear" mode="date" fields="year" value="{{checkYear}}">
+    <view>
+      {{checkYear}}年
+      <text class="iconfont icon-xiala"></text>
+    </view>
+  </picker>
+</view>
+<view class="detailShow">
+  <view class="detailTitle">
+    <view>月份</view>
+    <view>收入</view>
+    <view>支出</view>
+    <view>结余</view>
+  </view>
+  <scroll-view scroll-y class="scrollView">
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+    <view class="detailScroll">
+      <view>03月</view>
+      <view>0</view>
+      <view>1870.5</view>
+      <view>-1870.5</view>
+    </view>
+  </scroll-view>
+</view>

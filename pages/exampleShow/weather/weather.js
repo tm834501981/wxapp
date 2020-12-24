@@ -253,6 +253,7 @@ Page({
           maxdata.push(item.tmp_max)
           mindata.push(item.tmp_min)
         })
+        console.log(maxdata,mindata)
         chartLine.setOption({
           series: [{
             data: maxdata

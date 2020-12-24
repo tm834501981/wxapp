@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/user/user",
-    "pages/exampleShow/examples/examples",
     "pages/exampleShow/examplesAll/examplesAll",
+    "pages/exampleShow/examples/examples",
     "pages/exampleShow/examplesData/examplesData",
     "pages/exampleShow/map/examplesDiDi/examplesDiDi",
     "pages/exampleShow/map/examplesmapline/examplesmapline",
@@ -12,44 +12,38 @@
     "pages/exampleShow/note/noteDetail/noteDetail",
     "pages/exampleShow/note/noteCanvas/noteCanvas",
     "pages/exampleShow/note/noteYear/noteYear",
-    "pages/exampleShow/note/noteNow/noteNow"
+    "pages/exampleShow/note/noteNow/noteNow",
+    "pages/exampleShow/note/noteLineDetail/noteLineDetail"
   ],
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
   },
+  "tabBar":{
+    "color":"#fff",
+    "backgroundColor":"#000",
+    "selectedColor":"#F9F28B",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"精彩瞬间",
+        "iconPath":"/static/images/index.png",
+        "selectedIconPath": "/static/images/indexactive.png"
+      },
+      {
+        "pagePath":"pages/exampleShow/examplesAll/examplesAll",
+        "text":"样例",
+        "iconPath":"/static/images/user.png",
+        "selectedIconPath": "/static/images/useractive.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "土肥宅本女",
     "navigationBarTextStyle": "white"
-  },
-  "tabBar": {
-    "backgroundColor": "#000",
-    "borderStyle": "white",
-    "selectedColor": "#fff",
-    "color": "#999",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "精彩瞬间",
-        "iconPath": "/static/images/index.png",
-        "selectedIconPath": "/static/images/indexactive.png"
-      },
-      {
-        "pagePath": "pages/exampleShow/examplesAll/examplesAll",
-        "text": "样例",
-        "iconPath": "/static/images/index.png",
-        "selectedIconPath": "/static/images/indexactive.png"
-      },
-      {
-        "pagePath": "pages/user/user",
-        "text": "个人主页",
-        "iconPath": "/static/images/user.png",
-        "selectedIconPath": "/static/images/useractive.png"
-      }
-    ]
   },
   "sitemapLocation": "sitemap.json"
 }

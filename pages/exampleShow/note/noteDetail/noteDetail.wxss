@@ -18,6 +18,19 @@ page {
 .first {
   width:35%;
 }
+.picker{
+  position: relative;
+}
+.picker::after{
+  display: block;
+  content: "";
+  position: absolute;
+  right:55rpx;
+  top:10rpx;
+  border-right: 1rpx solid #333;
+  height: 50rpx;
+  width: 20rpx;
+}
 .secd {
   width:35%;
 }
@@ -49,13 +62,13 @@ page {
   float: right;
 }
 .infoIcon {
-  width: 100rpx;
-  height: 100rpx;
+  width: 80rpx;
+  height: 80rpx;
   border-radius: 50%;
   background:#FDDC2D;
-  font-size:60rpx;
+  font-size:50rpx;
   text-align: center;
-  line-height: 100rpx;
+  line-height: 80rpx;
   /* color:#FDDC2D; */
 }
 .infoItem {
@@ -64,10 +77,10 @@ page {
   justify-content: space-between;
 }
 .word {
-  line-height: 100rpx;
+  line-height: 80rpx;
   font-size:32rpx;
   display: block;
-  width:calc(100% - 130rpx);
+  width:calc(100% - 110rpx);
   border-bottom: 1rpx solid #E3E2E2;
 }
 .infoPrice {

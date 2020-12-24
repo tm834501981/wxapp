@@ -9,19 +9,25 @@ Page({
     monthdate:'',
     yearDate:'',
     date: '',//当前选择时间
-    multiArray: [['2017年', '2018年', '2019年', '2020年'], ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月','12月']],
   },
+  // 详情页
+  goDetailShow(e){
+    // let {
 
+    // } = e.currentTarget.dataset || {}
+    wx.navigateTo({
+      url: '/pages/exampleShow/note/noteLineDetail/noteLineDetail',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   bindMultiPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log('picker发送选择改变，携带值为',e.detail.value)
     let that = this
-    let monthdate = that.data.multiArray[1][e.detail.value[1]]
-    monthdate = that.add0(monthdate)
-    let yearDate = that.data.multiArray[0][e.detail.value[0]]
-    yearDate = that.add0(yearDate)
+    let date =  e.detail.value
+    let monthdate = date.substring(5,7)
+    let yearDate = date.substring(0,4)
     that.setData({
       monthdate,
       yearDate
