@@ -1,2 +1,127 @@
 @import "../noteIconfont/iconfont.wxss";
 @import "../template/noteBottom.wxss";
+
+.topChoose {
+  background: #FDDC2D;
+  padding: 30rpx 0rpx;
+}
+.iconShow {
+  width: 500rpx;
+  height: 50rpx;
+  border:1rpx solid  #343233;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.iconShow > view {
+  width:50%;
+  font-size: 28rpx;
+  line-height: 45rpx;
+  text-align: center;
+  color: #343434;
+}
+.iconShow > .activeChoose {
+  color:#FDDC2D;
+  background:  #343234;
+}
+.iconView {
+  width:100%;
+  height:calc(100vh - 200rpx);
+}
+.iconItem {
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+  margin: 10rpx 40rpx;
+}
+.iconsView {
+  display: flex;
+  flex-wrap: wrap;
+}
+.iconItem > text {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background:#F5F5F5;
+  color:#333;
+  font-size:60rpx;
+  line-height: 100rpx;
+  margin:10rpx auto;
+}
+.detailInfo {
+  position: absolute;
+  bottom:85rpx;
+  left:0;
+  width:100%;
+  background: #fff;
+  border-top:1rpx solid #D9D9D9;
+}
+.desShow {
+  display: flex;
+  font-size:28rpx;
+  color:#333;
+  line-height: 80rpx;
+  border-bottom:1rpx solid #D9D9D9;
+}
+.desShow >  text {
+  width:120rpx;
+  text-align: right;
+}
+.desText {
+  width:300rpx;
+  line-height: 80rpx;
+  height:80rpx;
+  padding-left: 20rpx;
+  /* border:1rpx solid red; */
+}
+.desNumber {
+  width: 400rpx;
+  font-size:34rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  height:80rpx;
+  padding:0rpx 20rpx;
+}
+.desNumber .numberContent {
+  width:360rpx;
+  float: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  direction: rtl;
+}
+.lineShow {
+  width:100%;
+  display: flex;  
+  flex-wrap: wrap;
+}
+.lineShow > view {
+  width:25%;
+  box-sizing: border-box;
+  font-size:28rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-bottom:1rpx solid #D9D9D9;
+  border-right:1rpx solid #D9D9D9;
+}
+.lineShow > view:nth-of-type(4),
+.lineShow > view:nth-of-type(8),
+.lineShow > view:nth-of-type(12),
+.lineShow > view:nth-of-type(16){
+  border-right:none;
+}
+.complete {
+  background:#F7DD56;
+}
+.deleteIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deleteIcon > image {
+  width:50rpx;
+}

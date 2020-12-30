@@ -1,1 +1,27 @@
 <!--pages/exampleShow/note/noteLineDetail/noteLineDetail.wxml-->
+<view class="topIcon">
+  <text class="iconfont iconShow icon-lingshi"></text>
+  <view>零食</view>
+</view>
+<view class="detailShow">
+  <view class="detailItem">
+    <view>类型</view>
+    <view>支出</view>
+  </view>
+  <view class="detailItem">
+    <view>金额</view>
+    <view>85</view>
+  </view>
+  <view class="detailItem">
+    <view>日期</view>
+    <view>2020年03月08日 星期日</view>
+  </view>
+  <view class="detailItem">
+    <view>备注</view>
+    <view>京东到家</view>
+  </view>
+</view>
+<view class="bottomView">
+  <view>编辑</view>
+  <view>删除</view>
+</view>

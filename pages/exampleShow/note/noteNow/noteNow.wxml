@@ -1,4 +1,32 @@
 <import src="../template/noteBottom.wxml"/>
-
-
 <template is="noteShow" data="{{showClass}}"></template>
+<view class="topChoose">
+  <view class="iconShow">
+    <view bindtap="gopay" class="{{notetype=='支出'?'activeChoose':''}}">支出</view>
+    <view bindtap="goget" class="{{notetype=='收入'?'activeChoose':''}}">收入</view>
+  </view>
+</view>
+<scroll-view scroll-y class="iconView">
+  <view class="iconsView">
+    <view class="iconItem" wx:for="{{icondata}}" wx:key="index">
+      <text class="iconfont {{item.iconName}}"></text>
+      <view>{{item.iconMsg}}</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="detailInfo">
+  <view class="desShow">
+    <text>备注:</text>
+    <input type="text" value="{{desValue}}" class="desText"/>
+    <view class="desNumber">
+      <view class="numberContent">{{numberValue}}</view >
+    </view>
+  </view>
+  <view class="lineShow">
+    <view wx:for="{{calcShow}}" wx:key="index" bindtap="getNumber" data-number="{{item.value}}">{{item.text}}</view>
+    <view class="deleteIcon">
+      <image src="http://www.tminlife.cn/wxapp/delete.png" mode="widthFix"></image>
+    </view>
+    <view class="complete">完成</view>
+  </view>
+</view>

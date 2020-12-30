@@ -125,22 +125,21 @@
           "scene": null
         },
         {
-          "id": -1,
-          "name": "记账-图表",
+          "name": "记账--图表",
           "pathName": "pages/exampleShow/note/noteCanvas/noteCanvas",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
-          "name": "记账-账单",
+          "name": "记账--账单",
           "pathName": "pages/exampleShow/note/noteYear/noteYear",
           "query": "",
           "scene": null
         },
         {
-          "name": "记账-详情",
+          "name": "记账--详情",
           "pathName": "pages/exampleShow/note/noteLineDetail/noteLineDetail",
+          "query": "",
           "scene": null
         }
       ]

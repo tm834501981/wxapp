@@ -1,1 +1,57 @@
 /* pages/exampleShow/note/noteLineDetail/noteLineDetail.wxss */
+@import "../noteIconfont/iconfont.wxss";
+
+.iconShow {
+  display: block;
+  margin: 0rpx auto;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background:#fff;
+  font-size:60rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.topIcon {
+  background: #FDDC2D;
+  padding: 50rpx 0rpx 30rpx 0rpx;
+}
+.topIcon > view {
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 15rpx;
+  color: #333;
+}
+.detailItem {
+  display: flex;
+  font-size:26rpx;
+  color:#333;
+  border-bottom:1rpx solid  #EBEBEB;
+  padding:30rpx 0rpx;
+  margin: 0rpx 30rpx;
+}
+.detailItem > view:first-child {
+  color:#969696;
+  width: 100rpx;
+}
+.detailItem > view:last-child {
+  width: 580rpx;
+}
+.bottomView > view {
+  width:50%;
+  font-size: 26rpx;
+  color: #333;
+  text-align: center;
+}
+.bottomView {
+  border-top:1rpx solid  #CBCBCB;
+  padding:20rpx 0rpx;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom:0;
+  left:0;
+}
+.bottomView > view:first-child {
+  border-right: 1rpx solid #CBCBCB;
+}
