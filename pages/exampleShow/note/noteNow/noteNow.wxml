@@ -24,7 +24,7 @@
   </view>
   <view class="lineShow">
     <view wx:for="{{calcShow}}" wx:key="index" bindtap="getNumber" data-number="{{item.value}}">{{item.text}}</view>
-    <view class="deleteIcon">
+    <view class="deleteIcon" bindtap="deleteNumber">
       <image src="http://www.tminlife.cn/wxapp/delete.png" mode="widthFix"></image>
     </view>
     <view class="complete">完成</view>
