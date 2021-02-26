@@ -7,10 +7,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showClac: false, //展示计算器
+    showDialog: false, //备注信息蒙版
     notetype: '支出',
     showClass:'jizhang',
     icondata:[],
-    desValue:'备注信息',
+    desValue:'',
     numberValue:'',
     number1:'',
     number2:'',
@@ -83,6 +85,24 @@ Page({
       numberValue
     })
   },
+  // =/完成
+  getResult() {
+    let that = this
+    let numberValue = that.data.numberValue
+    if(numberValue.indexOf('.',numberValue.length - 1) != -1) {
+      numberValue = numberValue.substring(0,numberValue.length - 1)
+    }
+    if(numberValue.indexOf('+') != -1 && numberValue.indexOf('+') == (numberValue.length - 1)) {
+      numberValue = numberValue.substring(0,numberValue.length - 1)
+    }
+    if(numberValue.indexOf('-') != -1 && numberValue.indexOf('-') == (numberValue.length - 1)) {
+      numberValue = numberValue.substring(0,numberValue.length - 1)
+    }
+    let result = (evalFn.calCommonExp(numberValue)).toFixed(2)
+    that.setData({
+      numberValue: result
+    })
+  },
   // 计算机点击
   getNumber(e){
     let that = this
@@ -91,12 +111,26 @@ Page({
     } = e.currentTarget.dataset || {}
     let number1 = that.data.number1
     let number2 = that.data.number2
+    if(number == 'date' ){
+      return
+    }
     if(number == '+' || number == '-'){
+      let numberValue = that.data.numberValue
+      if(numberValue.indexOf('.',numberValue.length - 1) != -1) {
+        numberValue = numberValue.substring(0,numberValue.length - 1)
+      }
+      if(numberValue.indexOf('+') != -1 && numberValue.indexOf('+') == (numberValue.length - 1)) {
+        numberValue = numberValue.substring(0,numberValue.length - 1)
+      }
+      if(numberValue.indexOf('-') != -1 && numberValue.indexOf('-') == (numberValue.length - 1)) {
+        numberValue = numberValue.substring(0,numberValue.length - 1)
+      }
       if(that.data.numberType){
-        let result = (evalFn.calCommonExp(that.data.numberValue)).toFixed(2)
+        let result = (evalFn.calCommonExp(numberValue)).toFixed(2)
         number1 = result
         that.setData({
-          numberValue: result
+          numberValue: result,
+          numberType:number
         })
       } else {
         that.setData({
@@ -104,37 +138,37 @@ Page({
         })
       }
     } 
-    // 解决左侧省略符号在前
     let numberValue
-    if(number == '+' || number == '-' || number == '.') {
-      numberValue = that.data.numberValue + number
-    } else {
-      numberValue = that.data.numberValue + number
-    }
-
+    numberValue = that.data.numberValue + number
     //小数点最多两位&长度不超过8
     if(!that.data.numberType) {
       number1 = numberValue
     } else {
-      console.log()
       let index = numberValue.indexOf(that.data.numberType) + 1
       number2 = numberValue.slice(index,numberValue.length)
     }
-
     if(number1.indexOf('.') != -1) {
       let dotIndex =number1.length - number1.indexOf('.')
+      if(dotIndex >= 2 && number == '.') {
+        if(!number2 && number == '.') {
+          return
+        }
+      }
       if(dotIndex > 3) {
         return
       }
     } else if(number1.length > 8) {
       return
     }
-
     if(number2.indexOf('.') != -1) {
       let dotIndex =number2.length - number2.indexOf('.')
+      if(dotIndex >= 2 && number == '.') {
+        return
+      }
       if(dotIndex > 3) {
         return
       }
+      
     } else if(number2.length > 8) {
       return
     }
@@ -144,63 +178,23 @@ Page({
       number1,
       number2
     })
-    // if(!that.data.numberType) {
-    //   let number1 = that.data.number1 + number
-    //   that.setData({
-    //     number1
-    //   })
-    // } else 
-    //   let number2 = that.data.number2 + number
-    //   that.setData({
-    //     number2
-    //   })
-    // }
-   
-    
-    // if(number == '+' || number == '-'){
-    //   if(that.data.numberType){
-    //     let result = (evalFn.calCommonExp(that.data.numberValue)).toFixed(2)
-    //     console.log(that.data.numberValue,result)
-    //     that.setData({
-    //       numberValue: result
-    //     })
-    //   } else {
-    //     that.setData({
-    //       numberType: number
-    //     })
-    //   }
-    // }
-    // let numberValue = that.data.numberValue + number
-    // if(numberValue.indexOf('.') != -1) {
-    //   if(numberValue.length - numberValue.indexOf('.') > 3) {
-    //     if(number >= 0 && number <= 9) {
-    //       return
-    //     }
-    //   }
-    // }
-    // that.setData({
-    //   numberValue
-    // })
-    // if(number == '+') {
-    //   if(that.data.numberType) {
-       
-    //   } else {
-    //     that.setData({
-    //       numberType: '+'
-    //     })
-    //   }
-    // } else if(number == '-') {
-    //   that.setData({
-    //     numberType: '-'
-    //   })
 
-    // } else if(number == 'date') {
-
-    // } else {
-   
-    // }
-    
-    // console.log(that.data.number1,that.data.number2)
+  },
+  // 备注信息
+  getCover(e) {
+    this.setData({
+      showDialog: true
+    })
+  },
+  removeCover() {
+    this.setData({
+      showDialog: false
+    })
+  },
+  getDes(e) {
+    this.setData({
+      desValue: e.detail.value
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -229,7 +223,16 @@ Page({
       })
     }
   },
-
+  // 选择图标记录
+  getClac(e) {
+    let {
+      data
+    } = e.currentTarget.dataset || {}
+    console.log(data)
+    this.setData({
+      showClac: true
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

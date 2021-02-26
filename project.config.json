@@ -1,142 +1,149 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": []
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
-    "setting": {
-        "urlCheck": true,
-        "es6": true,
-        "postcss": true,
-        "minified": true,
-        "newFeature": true,
-        "coverView": true,
-        "autoAudits": false,
-        "showShadowRootInWxmlPanel": true,
-        "scopeDataCheck": false,
-        "checkInvalidKey": true,
-        "checkSiteMap": true,
-        "uploadWithSourceMap": true,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        },
-        "useMultiFrameRuntime": true,
-        "bundle": false,
-        "useApiHook": true,
-        "useApiHostProcess": true
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.0",
+  "appid": "wx9ecf73709fc19f47",
+  "projectname": "%E5%9C%9F%E8%82%A5%E5%AE%85%E6%9C%AC%E5%A5%B3",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
     },
-    "compileType": "miniprogram",
-    "libVersion": "2.14.0",
-    "appid": "wx9ecf73709fc19f47",
-    "projectname": "%E5%9C%9F%E8%82%A5%E5%AE%85%E6%9C%AC%E5%A5%B3",
-    "debugOptions": {
-        "hidedInDevtools": []
+    "game": {
+      "list": []
     },
-    "isGameTourist": false,
-    "simulatorType": "wechat",
-    "simulatorPluginLibVersion": {},
-    "condition": {
-        "plugin": {
-            "list": []
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "个人主页",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
         },
-        "game": {
-            "list": []
+        {
+          "id": 1,
+          "name": "卡片上滑特效",
+          "pathName": "pages/exampleShow/examples/examples",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "id": 2,
+          "name": "全部样例",
+          "pathName": "pages/exampleShow/examplesAll/examplesAll",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "list": [
-                {
-                    "id": -1,
-                    "name": "个人主页",
-                    "pathName": "pages/user/user",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": 1,
-                    "name": "卡片上滑特效",
-                    "pathName": "pages/exampleShow/examples/examples",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": 2,
-                    "name": "全部样例",
-                    "pathName": "pages/exampleShow/examplesAll/examplesAll",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "日历打卡",
-                    "pathName": "pages/exampleShow/examplesData/examplesData",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": 4,
-                    "name": "地图",
-                    "pathName": "pages/exampleShow/map/examplesDiDi/examplesDiDi",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "地图-路线",
-                    "pathName": "pages/exampleShow/map/examplesmapline/examplesmapline",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "地图--搜索地点",
-                    "pathName": "pages/exampleShow/map/examplessearch/examplessearch",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "天气预报",
-                    "pathName": "pages/exampleShow/weather/weather",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "记账--明细",
-                    "pathName": "pages/exampleShow/note/noteDetail/noteDetail",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "记账--记账",
-                    "pathName": "pages/exampleShow/note/noteNow/noteNow",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "记账--图表",
-                    "pathName": "pages/exampleShow/note/noteCanvas/noteCanvas",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "记账--账单",
-                    "pathName": "pages/exampleShow/note/noteYear/noteYear",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "记账--详情",
-                    "pathName": "pages/exampleShow/note/noteLineDetail/noteLineDetail",
-                    "query": "",
-                    "scene": null
-                }
-            ]
+        {
+          "id": -1,
+          "name": "日历打卡",
+          "pathName": "pages/exampleShow/examplesData/examplesData",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "地图",
+          "pathName": "pages/exampleShow/map/examplesDiDi/examplesDiDi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "地图-路线",
+          "pathName": "pages/exampleShow/map/examplesmapline/examplesmapline",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "地图--搜索地点",
+          "pathName": "pages/exampleShow/map/examplessearch/examplessearch",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "天气预报",
+          "pathName": "pages/exampleShow/weather/weather",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "记账--明细",
+          "pathName": "pages/exampleShow/note/noteDetail/noteDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "记账--记账",
+          "pathName": "pages/exampleShow/note/noteNow/noteNow",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "记账--图表",
+          "pathName": "pages/exampleShow/note/noteCanvas/noteCanvas",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "记账--账单",
+          "pathName": "pages/exampleShow/note/noteYear/noteYear",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "记账--详情",
+          "pathName": "pages/exampleShow/note/noteLineDetail/noteLineDetail",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  }
 }

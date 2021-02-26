@@ -9,6 +9,7 @@
   padding:0rpx 30rpx;
   box-sizing: border-box;
   width:100%;
+  z-index:1000;
 }
 .bottomIcon {
   font-size:40rpx;
